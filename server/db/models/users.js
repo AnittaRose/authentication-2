@@ -17,15 +17,13 @@ const users = new mongoose.Schema({
     },
     otp: {
         type: String,
-      },
-      expirationTime: {
+    },
+    expirationTime: {
         type: Date,
-      }
-
-
-
-    
-
+    },
+    password_token : {
+        type : String
+    }
 });
 
 module.exports =mongoose.model("users",users);

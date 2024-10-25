@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoConnect = require('./db/connect');
 const userRouters = require('./routers/userRouter');
-// const authrouter = require ('./routers/authrouter')
+const authrouter = require ('./routers/authrouter')
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(userRouters);
-// app.use(authrouter);
+app.use(authrouter);
 
 app.listen(process.env.PORT, () =>{
     console.log(`server running at http://localhost:${process.env.PORT}`)

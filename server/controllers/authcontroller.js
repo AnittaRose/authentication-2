@@ -1,4 +1,3 @@
-// const successfunction = require('../util/')
 const users = require ('../db/models/users')
 const { successfunction, errorfunction } = require('../util/responsehandler')
 const bcrypt = require ('bcrypt')
